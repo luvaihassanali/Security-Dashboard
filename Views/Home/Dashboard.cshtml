@@ -1,0 +1,51 @@
+﻿﻿@{
+    ViewBag.Title = "Dashboard";
+}
+<head>
+    <script src="~/Scripts/dashboard.js"></script>
+</head>
+<br />
+<div id="legend" style="display:none; float:right"><i>Click item on legend to show/hide <br /> Click slice on pie chart to display data</i> </div>
+<button id="epoButton" style="display:none" onclick=" window.open('')">Open ePolicy Orchestrator</button> <br />
+<button id="sccmButton" style="display:none" onclick=" window.open('','_blank')">Open SCCM Reports</button>
+<br />
+<br />
+<div style="position:fixed; top:40%; left: 42%;">
+<p style="text-align:center; font-size: 35px; font-weight:600;" id="waitMessage">
+Loading...
+</p>   
+<div id="loader" class="loaderLarge"><img src="~/Content/l10s.svg"></div> <!-- Loading animation -->
+</div>
+<div id="hiddenDiv" style="display:none; height: 550px; overflow-y:scroll; background-color:white; position:absolute; z-index: 3; border: solid; border-width:1px;">
+    <input style="display:block" z-index="2" id="closeHiddenDiv" type="button" onclick="closeHiddenDiv() " value="Close"> <br>
+</div> <!-- hiddenDiv used to display data when clicking pie slices -->
+<div id="tail"></div> <!-- Pie chart % tool tip -->
+<div>
+    <div style="float:right; height:auto; width: 50%;"> <!-- Pie charts -->
+        <label id="threatLabel"></label>
+        <canvas id="threatCanvas"></canvas>
+        <br />
+        <label id="agentLabel"></label>
+        <canvas id="agentCanvas"></canvas>
+        <br />
+        <label id="detectionLabel"></label>
+        <canvas id="detectionCanvas"></canvas>
+        <br />
+        <label id="productLabel"></label>
+        <canvas id="productCanvas"></canvas>
+    </div>
+    <div style="float:left; height:auto; width: 50%;">
+        <label id="healthLabel"></label>
+        <canvas id="healthCanvas"></canvas>
+        <br />
+        <label id="passLabel"></label>
+        <canvas id="passCanvas"></canvas>
+        <br />
+        <label id="rebootLabel"></label>
+        <canvas id="rebootCanvas"></canvas>
+        <br />
+        <label id="activeClientLabel"></label>
+        <canvas id="activeCanvas"></canvas>
+    </div>
+</div>
+

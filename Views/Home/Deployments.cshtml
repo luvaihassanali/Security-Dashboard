@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Deployments";
+}
+<head>
+    <script src="~/Scripts/deployments.js"></script>
+</head>
+<br />
+<div style="position:fixed; top:40%; left: 42%;">
+    <p style="text-align:center; font-size: 35px; font-weight:600;" id="waitMessage">
+        Loading...
+    </p>
+    <div id="loader" class="loaderLarge"><img src="~/Content/l10s.svg"></div> <!-- Loading animation - class="loaderLarge" -->
+</div>
+<div id="tableDiv"></div> <!-- Firefox Patches needed, Deployment Summary, App Deployment Summary -->
+<br />
+<div> <!-- These two divs hold nothing currently-->
+    <div id="innerLeft" style="width:25%; float:left"></div>
+    <div id="innerRight" style="width:70%; float:right"></div>
+</div>

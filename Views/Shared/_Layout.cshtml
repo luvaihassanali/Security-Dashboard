@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Scripts/DataTables/datatables.min.css")
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/charts.min.js"></script>
+    <script src="~/Scripts/DataTables/datatables.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>"
+                    <!-- <span class="icon-bar"></span> --> <!-- Step 1 of Adding new Link-->
+                </button>
+                @Html.ActionLink("Public Safety Canada", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Search", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Dashboard", "Dashboard", "Home")</li>
+                    <li>@Html.ActionLink("Deployments", "Deployments", "Home")</li>
+                    <li>@Html.ActionLink("Collections", "Collections", "Home")</li>
+                    <!-- <li> Html.ActionLink("", "", "Home") </li> --> <!-- Step 2 of Adding new Link-->
+                </ul>
+                <p class="nav navbar-text navbar-right">User: @User.Identity.Name</p> <!-- Hello, @User.Identity.Name -->
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/bootstrap") 
+</body>
+</html>

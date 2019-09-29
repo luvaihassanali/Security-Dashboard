@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+<head>
+    <script src="~/Scripts/index.js"></script>
+</head>
+<br />
+<br />
+<br />
+<p>Enter hostname or username:</p>
+<div style="display:none;position:relative;float:left" id="loader" class="loader"><img src="~/Content/small.svg"></div> 
+<input type="text" id="searchText" value="DPS034431" />
+<button id="searchButton" onclick="submit()">Submit</button>
+<button style="float:right "id="reloadButton" onclick="reloadData()">Reload SQL Databases</button>
+<div id="tableDiv"></div>
+
+

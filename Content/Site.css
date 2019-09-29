@@ -1,0 +1,66 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 180px;
+}
+
+/* pie chart tool tip */
+#tail {
+    position: absolute;
+    float: left;
+    color: white;
+    background: grey;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0;
+}
+ 
+/* Loader animation on Search page */
+.loader {
+    float: left;
+    animation: spin 1s linear infinite;
+    margin-left: -30px;
+
+}
+
+/* Loader animation on Dashboard page */
+.loaderLarge {
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    animation: spin 5s linear infinite; 
+}
+
+/* Rotation animation for loaders */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
