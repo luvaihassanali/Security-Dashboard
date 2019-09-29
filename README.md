@@ -1,4 +1,4 @@
-[Documentation](https://github.com/luvaihassanali/SecurityDashboard/blob/master/Documentation/Dashboard%20Doc.pdf)
+[Documentation](https://github.com/luvaihassanali/Security-Dashboard/blob/master/Documentation/Dashboard%20Doc.pdf)
 
 | Screenshots  |
 | ------------- |
